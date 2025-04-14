@@ -25,9 +25,18 @@ let index = 0;
 
 const activeportfolio = ()=>{
     const imgslide = document.querySelector('.portfolio-carousel .img-slide');
+    const portfolioDetails = document.querySelectorAll('.portfolio-detail');
 
     imgslide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
+
+    portfolioDetails.forEach(details => {
+        details.classList.remove('active');
+    });
+    portfolioDetails[index].classList.add('active');
+    
 }
+
+
 
 arrowright.addEventListener('click', ()=>{
     if(index < 4){
