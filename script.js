@@ -1,5 +1,31 @@
 const resumebtns = document.querySelectorAll('.resume-btn');
 
+// const navlinks = document.querySelector('header nav a');
+// const logolink = document.querySelector('.logo');
+
+const activePage = ()=>{
+    navlinks.forEach(link =>{
+        link.classList.remove('active');
+    });
+}
+
+// navlinks.forEach((link, idx)=>{
+//     link.addEventListener('click',()=>{
+//         if(!link.classList.contains('active')){
+//             activePage();
+
+//             link.classList.add('active');
+//         }
+//     })
+// })
+
+// logolink.addEventListener('click',()=>{
+//     if(!navlinks[0].classList.contains('active'));
+//     activePage();
+
+//     navlinks[0].classList.add('active');
+// })
+
 resumebtns.forEach((btn,idx)=>{
     btn.addEventListener('click',()=>{
 
